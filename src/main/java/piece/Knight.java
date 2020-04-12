@@ -17,14 +17,14 @@ public class Knight extends Piece {
     List<Direction> getDirections() {
         return
             Arrays.asList(
-                new Composite(new LeftDiagonalUp(), new HorizontalLeft()),
-                new Composite(new LeftDiagonalUp(), new VerticalUp()),
-                new Composite(new RightDiagonalUp(), new VerticalUp()),
-                new Composite(new RightDiagonalUp(), new HorizontalRight()),
-                new Composite(new RightDiagonalDown(), new HorizontalRight()),
-                new Composite(new RightDiagonalDown(), new VerticalDown()),
-                new Composite(new LeftDiagonalDown(), new VerticalDown()),
-                new Composite(new LeftDiagonalDown(), new HorizontalLeft())
+                new CompositeDirection(new LeftDiagonalUp(), new HorizontalLeft()),
+                new CompositeDirection(new LeftDiagonalUp(), new VerticalUp()),
+                new CompositeDirection(new RightDiagonalUp(), new VerticalUp()),
+                new CompositeDirection(new RightDiagonalUp(), new HorizontalRight()),
+                new CompositeDirection(new RightDiagonalDown(), new HorizontalRight()),
+                new CompositeDirection(new RightDiagonalDown(), new VerticalDown()),
+                new CompositeDirection(new LeftDiagonalDown(), new VerticalDown()),
+                new CompositeDirection(new LeftDiagonalDown(), new HorizontalLeft())
             );
     }
 

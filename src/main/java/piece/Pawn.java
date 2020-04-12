@@ -2,7 +2,7 @@ package piece;
 
 import chessboard.Position;
 import naming.NamingStrategy;
-import rule.Composite;
+import rule.CompositeDirection;
 import rule.Direction;
 import rule.VerticalUp;
 
@@ -35,7 +35,7 @@ public class Pawn extends Piece {
 
     private Optional<Position> applyTwiceUp(String from) {
         Position current = namingStrategy.fromRepresentationalString(from);
-        Direction twiceUp = new Composite(new VerticalUp(), new VerticalUp());
+        Direction twiceUp = new CompositeDirection(new VerticalUp(), new VerticalUp());
 
         if (PAWN_HOME_RANK.test(current)) {
             return Optional.of(current.add(twiceUp.next()));

@@ -5,10 +5,10 @@ import chessboard.Position;
 import java.util.Arrays;
 import java.util.List;
 
-public class Composite implements Direction {
+public class CompositeDirection implements Direction {
     private final List<Direction> directions;
 
-    public Composite(Direction... directions) {
+    public CompositeDirection(Direction... directions) {
         this.directions = Arrays.asList(directions);
     }
 
